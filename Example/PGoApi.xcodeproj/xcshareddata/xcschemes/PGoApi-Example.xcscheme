@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -18,6 +18,20 @@
                BuildableName = "PGoApi_Example.app"
                BlueprintName = "PGoApi_Example"
                ReferencedContainer = "container:PGoApi.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "32DE909F174C589373212BC01F895324"
+               BuildableName = "PGoApi.framework"
+               BlueprintName = "PGoApi"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

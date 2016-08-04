@@ -33,7 +33,7 @@ public class GPSOAuth: PGoAuth {
     public var accessToken: String?
     public var expires: Int?
     public var loggedIn: Bool = false
-    public var delegate: PGoAuthDelegate?
+    @objc public var delegate: PGoAuthDelegate?
     public var authType: PGoAuthType = .Google
     public var endpoint: String = PGoEndpoint.Rpc
     public var authToken: Pogoprotos.Networking.Envelopes.AuthTicket?

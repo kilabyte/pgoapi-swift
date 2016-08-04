@@ -15,10 +15,7 @@ class ViewController: UIViewController, PGoAuthDelegate, PGoApiDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        auth = PtcOAuth()
-        auth.delegate = self
-        auth.login(withUsername: "", withPassword: "")
+        
     }
     
     func didReceiveAuth() {

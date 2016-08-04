@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AB53B47BC6DE73D3872097E2 /* Pods_PGoApi_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68719A6E9BEB3505427181EB /* Pods_PGoApi_Tests.framework */; };
+		D203153B1D53D41D0032D076 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D203153A1D53D41D0032D076 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,9 @@
 		6B61A04809202E68CF8BC656 /* Pods_PGoApi_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGoApi_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D41D69AAD579A5F0BCBA797 /* PGoApi.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PGoApi.podspec; path = ../PGoApi.podspec; sourceTree = "<group>"; };
 		BA43FE89BBE5B12039D64BD7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D20315381D53D41C0032D076 /* PGoApi_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PGoApi_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		D20315391D53D41D0032D076 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D203153A1D53D41D0032D076 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E6DADFDBA44A43D7C59198E9 /* Pods-PGoApi_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F3C39E33D25519A2548C9BC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,12 +97,14 @@
 		607FACD21AFB9204008FA782 /* Example for PGoApi */ = {
 			isa = PBXGroup;
 			children = (
+				D203153C1D53D4220032D076 /* ObjC_Example */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				D20315381D53D41C0032D076 /* PGoApi_Example-Bridging-Header.h */,
 			);
 			name = "Example for PGoApi";
 			path = PGoApi;
@@ -159,6 +165,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D203153C1D53D4220032D076 /* ObjC_Example */ = {
+			isa = PBXGroup;
+			children = (
+				D20315391D53D41D0032D076 /* RootViewController.h */,
+				D203153A1D53D41D0032D076 /* RootViewController.m */,
+			);
+			name = ObjC_Example;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,7 +224,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -361,6 +376,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				D203153B1D53D41D0032D076 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,11 +505,14 @@
 			baseConfigurationReference = 61E9BAB4200D7A55068D41C7 /* Pods-PGoApi_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PGoApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PGoApi/PGoApi_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -502,11 +521,13 @@
 			baseConfigurationReference = 37629CDE1FF91C1BC75F9C04 /* Pods-PGoApi_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PGoApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PGoApi/PGoApi_Example-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -84,6 +84,7 @@
 		C273E0462649C60B5BFCCA9108DC8158 /* PGoApiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267EA15E0066C93B60710F6689511BE7 /* PGoApiDelegate.swift */; };
 		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E650DC9A6372DFB56201B400E3B5F885 /* MultipartFormData.swift */; };
 		D11B7B95ECBD51300BD4184F2D70645E /* ExtensionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95B44D2744E5AD3B4CD941661D6C913 /* ExtensionRegistry.swift */; };
+		D20315371D53D01B0032D076 /* PGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20315361D53D01B0032D076 /* PGo.swift */; };
 		D7A3FBB33C9B991BF293ECDA9C7273AB /* RingBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5B5748B6B42FD091F219A21A6FB48 /* RingBuffer.swift */; };
 		E014418241CA9C11E3C484B6D0DB23F8 /* Google.Protobuf.Api.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5547EA8165031F2C18E62753D08E2273 /* Google.Protobuf.Api.proto.swift */; };
 		E6EC4FF319C2EE94CC2EF1992EF06B75 /* RpcApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297832640413A34C6E671E759EE46D43 /* RpcApi.swift */; };
@@ -231,6 +232,7 @@
 		CCAF97974264803D1271425595E1E43F /* Pods_PGoApi_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGoApi_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCDB0F510367F81866B22DF1C7DF830 /* AbstractMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractMessage.swift; path = Source/AbstractMessage.swift; sourceTree = "<group>"; };
 		CED500C6CFC15142A9F8234430099A8B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D20315361D53D01B0032D076 /* PGo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGo.swift; sourceTree = "<group>"; };
 		D2E3B98EE127ED61E098FC6CEC0ADDCE /* CodedOutputStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CodedOutputStream.swift; path = Source/CodedOutputStream.swift; sourceTree = "<group>"; };
 		D5AB032B5DAE1EE8DF1A8BF189DBA3F0 /* ConcreateExtensionField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcreateExtensionField.swift; path = Source/ConcreateExtensionField.swift; sourceTree = "<group>"; };
 		D7FE8072B2AD3D3C1A3C9AD6C509B92A /* Google.Protobuf.Timestamp.proto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Google.Protobuf.Timestamp.proto.swift; path = Source/Google.Protobuf.Timestamp.proto.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				A31E03161D51312F00B69C63 /* protos */,
+				D20315361D53D01B0032D076 /* PGo.swift */,
 				ACD3E1AD6111B387A2127EC65F03B7CB /* PGoAuth.swift */,
 				816BA448A9C6DBB694F7A5ADD3C8B6D5 /* PGoAuthDelegate.swift */,
 				93DEBCF76692370947479E13F13F1975 /* PtcOAuth.swift */,
@@ -711,7 +714,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -748,6 +751,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31E03311D51314600B69C63 /* Pogoprotos.Data.PogoprotosData.proto.swift in Sources */,
+				D20315371D53D01B0032D076 /* PGo.swift in Sources */,
 				A31E033E1D51314600B69C63 /* Pogoprotos.Settings.Master.Pokemon.PogoprotosSettingsMasterPokemon.proto.swift in Sources */,
 				A31E03341D51314600B69C63 /* Pogoprotos.Inventory.PogoprotosInventory.proto.swift in Sources */,
 				A31E033B1D51314600B69C63 /* Pogoprotos.Networking.Responses.PogoprotosNetworkingResponses.proto.swift in Sources */,
@@ -974,6 +978,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PGoApi/PGoApi.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = PGoApi;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1003,6 +1008,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1032,6 +1038,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ProtocolBuffers-Swift/ProtocolBuffers-Swift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = ProtocolBuffers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1094,6 +1101,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1157,6 +1165,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/ProtocolBuffers-Swift/ProtocolBuffers-Swift.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = ProtocolBuffers;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1229,6 +1238,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PGoApi/PGoApi.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = PGoApi;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

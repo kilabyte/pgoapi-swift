@@ -22,7 +22,7 @@ public struct PGoSetting {
     public static let SettingsHash = "05daf51635c82611d1aac95c0b051d3ec088a930"
 }
 
-public enum PGoApiIntent {
+@objc public enum PGoApiIntent:Int {
     case Login
     case SimulateAppStart
     case PlayerUpdate

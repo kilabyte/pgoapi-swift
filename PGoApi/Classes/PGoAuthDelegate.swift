@@ -9,7 +9,7 @@
 import Foundation
 
 
-public protocol PGoAuthDelegate {
-    func didReceiveAuth()
-    func didNotReceiveAuth()
+@objc public protocol PGoAuthDelegate {
+    @objc func didReceiveAuth()
+    @objc func didNotReceiveAuth()
 }
